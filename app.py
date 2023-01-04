@@ -5,9 +5,6 @@ from flask import Flask
 app = Flask(__name__)
 
 @app.route('/')
-def hello_world():
-    return 'Hello, World! This is a Flask app running on render.'
-
 def read_file(sn,tn):
 	s = cv2.imread('source/'+sn+'.bmp')
 	s = cv2.cvtColor(s,cv2.COLOR_BGR2LAB)
@@ -48,3 +45,4 @@ def color_transfer():
 		cv2.imwrite('result/r'+str(n+1)+'.bmp',s)
 
 color_transfer()
+return 'Hello, World! This is a Flask app running on render.'
