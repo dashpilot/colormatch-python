@@ -45,4 +45,4 @@ def color_transfer():
 		cv2.imwrite('result/r'+str(n+1)+'.bmp',s)
 
 color_transfer()
-return 'Hello, World! This is a Flask app running on render.'
+# return 'Hello, World! This is a Flask app running on render.'
