@@ -1,4 +1,5 @@
-import os
+from transfer import transfer
+
 from flask import Flask
 # from color_transfer import color_transfer
 app = Flask(__name__)
@@ -9,4 +10,6 @@ def hello():
 
 @app.route('/test')
 def testing():
-    exec(open('transfer.py').read())
+    transfer()
+    return 'Color transfer complete!'
+    
