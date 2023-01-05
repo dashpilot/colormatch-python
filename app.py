@@ -1,3 +1,4 @@
+import os
 from flask import Flask
 # from color_transfer import color_transfer
 app = Flask(__name__)
@@ -7,6 +8,8 @@ def hello():
     return 'Hello World'
 
 @app.route('/test')
-def test():
-    file = open('transfer.py', 'r').read()
-    return exec(file)
+def include(filename):
+    if os.path.exists(filename): 
+        execfile(filename)
+        
+include('transfer.py')
