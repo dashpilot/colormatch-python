@@ -8,5 +8,5 @@ def hello():
 
 @app.route('/test')
 def test():
-    file = open('/color_transfer.py', 'r').read()
+    file = open('color_transfer.py', 'r').read()
     return exec(file)
