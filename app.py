@@ -8,8 +8,5 @@ def hello():
     return 'Hello World'
 
 @app.route('/test')
-def include(filename):
-    if os.path.exists(filename): 
-        execfile(filename)
-        
-include('transfer.py')
+def testing():
+    exec(open('transfer.py').read())
