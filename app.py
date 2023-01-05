@@ -1,4 +1,4 @@
-from transfer import transfer
+from transfer import color_transfer
 
 from flask import Flask
 # from color_transfer import color_transfer
